@@ -31,6 +31,13 @@
     nixswitch = "darwin-rebuild switch --flake ~/.config/nix-config/.#cbodman-macbook";
   };
 
+  # Enable zsh in home-manager to make aliases available
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
