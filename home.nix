@@ -16,6 +16,7 @@
     pkgs.fd
     pkgs.htop
     pkgs.fzf
+    pkgs._1password-cli
   ];
 
   # Basic Git configuration
@@ -30,6 +31,7 @@
     gs = "git status";
     ll = "ls -l";
     nixswitch = "sudo darwin-rebuild switch --flake ~/.config/nix-config/.#cbodman-macbook";
+    gcb = "git branch --sort=-committerdate | fzf | xargs -I {} git checkout {}";
   };
 
   # Enable zsh in home-manager to make aliases available
