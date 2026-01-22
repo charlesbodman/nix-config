@@ -6,6 +6,7 @@
   environment.systemPackages = [ 
     pkgs.vim
     pkgs.git
+    # pkgs.fzf
   ];
 
   # Auto upgrade nix package and the daemon service.

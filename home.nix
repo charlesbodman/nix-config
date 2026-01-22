@@ -15,6 +15,7 @@
     pkgs.ripgrep
     pkgs.fd
     pkgs.htop
+    pkgs.fzf
   ];
 
   # Basic Git configuration
@@ -28,7 +29,7 @@
   home.shellAliases = {
     gs = "git status";
     ll = "ls -l";
-    nixswitch = "darwin-rebuild switch --flake ~/.config/nix-config/.#cbodman-macbook";
+    nixswitch = "sudo darwin-rebuild switch --flake ~/.config/nix-config/.#cbodman-macbook";
   };
 
   # Enable zsh in home-manager to make aliases available
@@ -37,6 +38,11 @@
     enableCompletion = true;
     autosuggestion.enable = true;
   };
+
+  # Add per-user profile to PATH (needed when useUserPackages = true)
+  home.sessionPath = [
+    "/etc/profiles/per-user/cbodman/bin"
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
