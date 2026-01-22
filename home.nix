@@ -40,6 +40,24 @@
     autosuggestion.enable = true;
   };
 
+  # Enable mise to manage tools
+  programs.mise = {
+    enable = true;
+    enableZshIntegration = true;
+    globalConfig = {
+      settings = {
+        idiomatic_version_file = true;
+        legacy_version_file = true;
+      };
+    };
+  };
+
+  # Enable z navigation
+  programs.z-lua = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+  
   # Add per-user profile to PATH (needed when useUserPackages = true)
   home.sessionPath = [
     "/etc/profiles/per-user/cbodman/bin"
