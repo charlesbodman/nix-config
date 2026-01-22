@@ -36,6 +36,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
   };
 
@@ -43,6 +44,10 @@
   home.sessionPath = [
     "/etc/profiles/per-user/cbodman/bin"
   ];
+
+  programs.starship = {
+    enable = true;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

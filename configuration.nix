@@ -50,4 +50,8 @@
     NSGlobalDomain.AppleInterfaceStyle = "Dark";
     NSGlobalDomain.KeyRepeat = 2;
   };
+
+  fonts.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
+  ];
 }
