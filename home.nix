@@ -20,8 +20,8 @@
   # Basic Git configuration
   programs.git = {
     enable = true;
-    userName = "cbodman";
-    userEmail = "cbodman@flashpoint-intel.com";
+    settings.user.email = "cbodman@flashpoint-intel.com";
+    settings.user.name = "cbodman";
   };
 
   # Shell aliases

@@ -8,7 +8,7 @@
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }: {
-    darwinConfigurations."cbodman's MacBook" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."cbodman-macbook" = nix-darwin.lib.darwinSystem {
       modules = [
         ./configuration.nix
         home-manager.darwinModules.home-manager

@@ -9,7 +9,8 @@
   ];
 
   # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+  # services.nix-daemon.enable = false;
+
   nix.settings.experimental-features = "nix-command flakes";
 
   # Create /etc/zshrc that loads the nix-darwin environment.
@@ -24,6 +25,17 @@
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  # User configuration
+  users.users.cbodman = {
+    home = "/Users/cbodman";
+  };
+
+  # Set primary user for system defaults
+  system.primaryUser = "cbodman";
+
+  # Set Nix build user and group IDs
+  ids.gids.nixbld = 350;
 
   # macOS System Defaults
   system.defaults = {
