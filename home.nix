@@ -20,6 +20,7 @@
     pkgs.google-cloud-sdk
     pkgs.kubectl
     pkgs.k3d
+    pkgs.kubernetes-helm
   ];
 
   # Basic Git configuration
