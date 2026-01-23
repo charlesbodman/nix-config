@@ -56,6 +56,18 @@
     NSGlobalDomain.NSAutomaticDashSubstitutionEnabled = false;
   };
 
+  # Keyboard remapping: Swap Ctrl and Caps Lock
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToControl = true;
+    userKeyMapping = [
+      {
+        HIDKeyboardModifierMappingSrc = 30064771296;  # Left Control
+        HIDKeyboardModifierMappingDst = 30064771300;  # Caps Lock
+      }
+    ];
+  };
+
   fonts.packages = [
     pkgs.nerd-fonts.jetbrains-mono
   ];

@@ -6,10 +6,7 @@
     onActivation.cleanup = "zap"; # This will make Nix the source of truth
     
     # Standard CLI tools (Formulas)
-    brews = [
-      "kubectl"
-      "k3d"
-    ];
+    brews = [];
 
     # GUI Applications (Casks)
     casks = [

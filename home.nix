@@ -17,13 +17,19 @@
     pkgs.htop
     pkgs.fzf
     pkgs._1password-cli
+    pkgs.google-cloud-sdk
+    pkgs.kubectl
+    pkgs.k3d
   ];
 
   # Basic Git configuration
   programs.git = {
     enable = true;
-    settings.user.email = "cbodman@flashpoint-intel.com";
-    settings.user.name = "cbodman";
+    settings = {
+      core.editor = "vim";
+      user.email = "cbodman@flashpoint-intel.com";
+      user.name = "cbodman";
+    };
   };
 
   # Shell aliases
