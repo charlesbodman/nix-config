@@ -21,6 +21,7 @@
     pkgs.kubectl
     pkgs.k3d
     pkgs.kubernetes-helm
+    pkgs.gemini-cli
   ];
 
   # Basic Git configuration
