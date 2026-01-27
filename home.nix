@@ -42,13 +42,19 @@
     gcb = "git branch --sort=-committerdate | fzf | xargs -I {} git checkout {}";
   };
 
-  # Enable zsh in home-manager to make aliases available
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    autosuggestion.enable = true;
-  };
+    # Enable zsh in home-manager to make aliases available
+    programs.zsh = {
+      enable = true;
+      enableCompletion = true;
+      syntaxHighlighting.enable = true;
+      autosuggestion.enable = true;
+      initContent = ''
+        # Add Homebrew to PATH
+        if [[ -d /opt/homebrew/bin ]]; then
+          export PATH="/opt/homebrew/bin:$PATH"
+        fi
+      '';
+    };
 
   # Enable mise to manage tools
   programs.mise = {
