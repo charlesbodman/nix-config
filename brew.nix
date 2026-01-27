@@ -15,6 +15,7 @@
       "cursor"
       "docker-desktop"
       "1password"
+      "obsidian"
     ];
   };
 }
