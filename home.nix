@@ -22,6 +22,8 @@
     pkgs.k3d
     pkgs.kubernetes-helm
     pkgs.gemini-cli
+    pkgs.sops
+    pkgs.azure-cli
   ];
 
   # Basic Git configuration
@@ -40,6 +42,7 @@
     ll = "ls -l";
     nixswitch = "sudo darwin-rebuild switch --flake ~/.config/nix-config/.#cbodman-macbook";
     gcb = "git branch --sort=-committerdate | fzf | xargs -I {} git checkout {}";
+    gwip = "git add . && git commit -m 'WIP'";
   };
 
     # Enable zsh in home-manager to make aliases available

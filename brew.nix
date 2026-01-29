@@ -21,6 +21,7 @@
       "1password"
       "obsidian"
       "dtop"
+      "tableplus"
     ];
   };
 }
