@@ -42,6 +42,7 @@
     ll = "ls -l";
     nixswitch = "sudo darwin-rebuild switch --flake ~/.config/nix-config/.#cbodman-macbook";
     gcb = "git branch --sort=-committerdate | fzf | xargs -I {} git checkout {}";
+    gcrb = "git branch -r --sort=-committerdate | grep -v 'HEAD ->' | sed 's/^[[:space:]]*origin\\///' | fzf | xargs -I {} git checkout {}";
     gwip = "git add . && git commit -m 'WIP'";
   };
 
