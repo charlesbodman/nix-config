@@ -3,14 +3,22 @@
 {
   homebrew = {
     enable = true;
-    onActivation.cleanup = "zap"; # This will make Nix the source of truth
+    onActivation = {
+      cleanup = "zap";
+      autoUpdate = true;
+      upgrade = true;
+    };
     
     taps = [
       "amir20/homebrew-dtop"
     ];
 
     # Standard CLI tools (Formulas)
-    brews = [];
+    brews = [
+      "glab"
+      "mkcert"
+      "nss"
+    ];
 
     # GUI Applications (Casks)
     casks = [
