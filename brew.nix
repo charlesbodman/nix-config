@@ -18,6 +18,7 @@
       "glab"
       "mkcert"
       "nss"
+      "tokei"
     ];
 
     # GUI Applications (Casks)
