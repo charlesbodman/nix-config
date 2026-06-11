@@ -20,8 +20,7 @@
     pkgs.google-cloud-sdk
     pkgs.kubectl
     pkgs.k3d
-    pkgs.kubernetes-helm
-    pkgs.gemini-cli
+    pkgs.antigravity-cli
     pkgs.sops
     pkgs.azure-cli
   ];
@@ -91,6 +90,9 @@
 
   programs.starship = {
     enable = true;
+    settings = {
+      command_timeout = 1000;
+    };
   };
 
   # Let Home Manager install and manage itself.

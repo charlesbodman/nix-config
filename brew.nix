@@ -16,6 +16,7 @@
 
     # Standard CLI tools (Formulas)
     brews = [
+      "helm"
       "glab"
       "mkcert"
       "nss"
