@@ -65,10 +65,15 @@
     enable = true;
     enableZshIntegration = true;
     globalConfig = {
+      tools = {
+        uv = "0.11.20";
+        node = "26.3.0";
+        "npm:@devcontainers/cli" = "0.87.0";
+      };
       settings = {
         idiomatic_version_file = true;
         legacy_version_file = true;
-        idiomatic_version_file_enable_tools = [ "node" ];
+        idiomatic_version_file_enable_tools = [ "node" "uv" ];
       };
     };
   };

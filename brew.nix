@@ -7,6 +7,7 @@
       cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
+      extraFlags = [ "--force" ];
     };
     
     taps = [
@@ -19,6 +20,7 @@
       "mkcert"
       "nss"
       "tokei"
+      "git-cliff"
     ];
 
     # GUI Applications (Casks)
