@@ -88,8 +88,15 @@
   home.sessionPath = [
     "/etc/profiles/per-user/cbodman/bin"
     # Rancher Desktop CLI tools (docker, kubectl, nerdctl, helm, etc.)
-    "~/.rd/bin"
+    "/Users/cbodman/.rd/bin"
   ];
+
+  # Point Docker clients at the Rancher Desktop socket. RD doesn't create the
+  # /var/run/docker.sock symlink without admin access, so tools like dtop and
+  # the docker CLI need DOCKER_HOST to find the engine.
+  home.sessionVariables = {
+    DOCKER_HOST = "unix:///Users/cbodman/.rd/docker.sock";
+  };
 
   programs.starship = {
     enable = true;

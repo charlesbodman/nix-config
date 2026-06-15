@@ -9,10 +9,6 @@
       upgrade = true;
       extraFlags = [ "--force" ];
     };
-    
-    taps = [
-      "amir20/homebrew-dtop"
-    ];
 
     # Standard CLI tools (Formulas)
     brews = [
@@ -20,6 +16,7 @@
       "glab"
       "mkcert"
       "nss"
+      "dtop"
       "tokei"
       "git-cliff"
     ];
@@ -31,7 +28,6 @@
       "cursor"
       "1password"
       "obsidian"
-      "dtop"
       "tableplus"
       "rancher"
     ];
