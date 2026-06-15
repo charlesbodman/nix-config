@@ -29,11 +29,11 @@
       "ghostty"
       "google-chrome"
       "cursor"
-      "docker-desktop"
       "1password"
       "obsidian"
       "dtop"
       "tableplus"
+      "rancher"
     ];
   };
 }

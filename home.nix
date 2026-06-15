@@ -20,6 +20,7 @@
     pkgs.google-cloud-sdk
     pkgs.kubectl
     pkgs.k3d
+    pkgs.k9s
     pkgs.antigravity-cli
     pkgs.sops
     pkgs.azure-cli
@@ -86,6 +87,8 @@
   # Add per-user profile to PATH (needed when useUserPackages = true)
   home.sessionPath = [
     "/etc/profiles/per-user/cbodman/bin"
+    # Rancher Desktop CLI tools (docker, kubectl, nerdctl, helm, etc.)
+    "~/.rd/bin"
   ];
 
   programs.starship = {
