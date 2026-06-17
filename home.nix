@@ -21,9 +21,11 @@
     pkgs.kubectl
     pkgs.k3d
     pkgs.k9s
+    pkgs.gh
     pkgs.antigravity-cli
     pkgs.sops
     pkgs.azure-cli
+    pkgs.neovim
   ];
 
   # Basic Git configuration
@@ -40,6 +42,7 @@
   home.shellAliases = {
     gs = "git status";
     ll = "ls -l";
+    vim = "nvim";
     nixswitch = "sudo darwin-rebuild switch --flake ~/.config/nix-config/.#cbodman-macbook";
     gcb = "git branch --sort=-committerdate | fzf | xargs -I {} git checkout {}";
     gcrb = "git branch -r --sort=-committerdate | grep -v 'HEAD ->' | sed 's/^[[:space:]]*origin\\///' | fzf | xargs -I {} git checkout {}";
