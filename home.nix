@@ -47,6 +47,7 @@
     gcb = "git branch --sort=-committerdate | fzf | xargs -I {} git checkout {}";
     gcrb = "git branch -r --sort=-committerdate | grep -v 'HEAD ->' | sed 's/^[[:space:]]*origin\\///' | fzf | xargs -I {} git checkout {}";
     gwip = "git add . && git commit -m 'WIP'";
+    k = "kubectl";
   };
 
     # Enable zsh in home-manager to make aliases available
@@ -72,6 +73,8 @@
         uv = "0.11.20";
         node = "26.3.0";
         "npm:@devcontainers/cli" = "0.87.0";
+        "npm:@fission-ai/openspec" = "1.4.1";
+        "npm:pnpm" = "11.8.0";
       };
       settings = {
         idiomatic_version_file = true;
@@ -92,6 +95,10 @@
     "/etc/profiles/per-user/cbodman/bin"
     # Rancher Desktop CLI tools (docker, kubectl, nerdctl, helm, etc.)
     "/Users/cbodman/.rd/bin"
+    # Cursor IDE command line tool (`cursor` open-in-editor)
+    "/Applications/Cursor.app/Contents/Resources/app/bin"
+    # Cursor Agent CLI (`agent` / `cursor-agent`); installed outside Nix to ~/.local/bin
+    "/Users/cbodman/.local/bin"
   ];
 
   # Point Docker clients at the Rancher Desktop socket. RD doesn't create the

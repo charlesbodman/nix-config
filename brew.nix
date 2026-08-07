@@ -30,6 +30,7 @@
       "obsidian"
       "tableplus"
       "rancher"
+      "anki"
     ];
   };
 }
