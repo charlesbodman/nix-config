@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./nvim.nix
+  ];
+
   home.username = "cbodman";
   home.homeDirectory = "/Users/cbodman";
 
@@ -25,7 +29,6 @@
     pkgs.antigravity-cli
     pkgs.sops
     pkgs.azure-cli
-    pkgs.neovim
   ];
 
   # Basic Git configuration
